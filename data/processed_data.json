@@ -1,0 +1,70 @@
+{
+    "documents": [
+        {
+            "id": "doc_ml_basics",
+            "filename": "machine_learning_basics.pdf",
+            "title": "机器学习基础",
+            "author": "未知作者",
+            "abstract": "本文全面介绍了机器学习的基本概念，涵盖监督学习、无监督学习、强化学习等核心范畴，是入门机器学习的理想选择。",
+            "keywords": ["机器学习", "监督学习", "无监督学习", "强化学习", "AI"],
+            "path": "./data/pdfs/2405.20441v4.pdf",
+            "icon": "🚀" 
+        },
+        {
+            "id": "doc_rl_advanced",
+            "filename": "reinforcement_learning_advanced.pdf",
+            "title": "强化学习进阶理论与应用",
+            "author": "张三",
+            "abstract": "深入探讨了强化学习的最新进展，包括深度Q网络、策略梯度方法以及多智能体强化学习等前沿技术。",
+            "keywords": ["强化学习", "DQN", "策略梯度", "多智能体", "AI"],
+            "path": "./data/pdfs/1_2502.13129v1.pdf",
+            "icon": "🧠"
+        },
+        {
+            "id": "doc_dl_overview",
+            "filename": "deep_learning_overview.pdf",
+            "title": "深度学习概览",
+            "author": "李四",
+            "abstract": "简要概述了深度学习的起源、发展及其在图像识别和自然语言处理中的应用，是理解深度学习的快速通道。",
+            "keywords": ["深度学习", "神经网络", "图像识别", "NLP", "AI"],
+            "path": "./data/pdfs/2501.07542v1.pdf",
+            "icon": "💡"
+        },
+        {
+            "id": "concept_supervised",
+            "filename": null,
+            "title": "监督学习 (概念)",
+            "abstract": "通过标记数据进行训练的一种机器学习方法。",
+            "keywords": ["概念", "机器学习"],
+            "path": "./data/pdfs/dspy_lec.pdf",
+            "icon": "🏷️"
+        },
+        {
+            "id": "concept_unsupervised",
+            "filename": null,
+            "title": "无监督学习 (概念)",
+            "abstract": "在没有标记数据的情况下发现数据模式的机器学习方法。",
+            "keywords": ["概念", "机器学习"],
+            "path": "./data/pdfs/The why, how, and when of representations for complex systems.pdf",
+            "icon": "🔍"
+        }
+    ],
+    "graph": {
+        "nodes": [
+            {"id": "doc_ml_basics", "label": "机器学习基础", "type": "document", "group": "ML"},
+            {"id": "doc_rl_advanced", "label": "强化学习进阶", "type": "document", "group": "RL"},
+            {"id": "doc_dl_overview", "label": "深度学习概览", "type": "document", "group": "DL"},
+            {"id": "concept_supervised", "label": "监督学习", "type": "concept", "group": "ML"},
+            {"id": "concept_unsupervised", "label": "无监督学习", "type": "concept", "group": "ML"}
+        ],
+        "links": [
+            {"source": "doc_ml_basics", "target": "doc_rl_advanced", "type": "相关"},
+            {"source": "doc_ml_basics", "target": "doc_dl_overview", "type": "相关"},
+            {"source": "doc_ml_basics", "target": "concept_supervised", "type": "包含"},
+            {"source": "doc_ml_basics", "target": "concept_unsupervised", "type": "包含"},
+            {"source": "doc_rl_advanced", "target": "concept_supervised", "type": "基于"},
+            {"source": "doc_rl_advanced", "target": "doc_dl_overview", "type": "结合"},
+            {"source": "concept_supervised", "target": "concept_unsupervised", "type": "对比"}
+        ]
+    }
+}
